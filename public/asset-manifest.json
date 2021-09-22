@@ -1,0 +1,38 @@
+{
+  "files": {
+    "common~common~main.js": "/assets/js/common~common~main.2d58fa65.js",
+    "common~common~main.js.map": "/assets/js/common~common~main.2d58fa65.js.map",
+    "manifest.js": "/manifest.e79f5ea4.js",
+    "manifest.js.map": "/manifest.e79f5ea4.js.map",
+    "common.js": "/assets/js/common.80568e4b.js",
+    "common.js.map": "/assets/js/common.80568e4b.js.map",
+    "main.js": "/assets/js/main.587accb8.js",
+    "main.js.map": "/assets/js/main.587accb8.js.map",
+    "material-ui.js": "/assets/js/material-ui.f8596347.js",
+    "material-ui.js.map": "/assets/js/material-ui.f8596347.js.map",
+    "vendors~main.js": "/assets/js/vendors~main.0b5cf8b7.js",
+    "vendors~main.js.map": "/assets/js/vendors~main.0b5cf8b7.js.map",
+    "assets/1-b16955d7bdd25448fff9403053d119e0.png": "/assets/1-b16955d7bdd25448fff9403053d119e0.png",
+    "assets/2-a042a16c6b00771e81c93d9531c7f4be.png": "/assets/2-a042a16c6b00771e81c93d9531c7f4be.png",
+    "assets/3-af3196da3356ca3125ad2f8a5677f2b7.png": "/assets/3-af3196da3356ca3125ad2f8a5677f2b7.png",
+    "assets/4-b530b7cec7daf00170e4e86da31eb79f.png": "/assets/4-b530b7cec7daf00170e4e86da31eb79f.png",
+    "assets/5-4785b1fbf8bd3d9357f924db07b06d36.png": "/assets/5-4785b1fbf8bd3d9357f924db07b06d36.png",
+    "assets/Logo-dark-80047b693350d6f7a1579b7ce1838871.png": "/assets/Logo-dark-80047b693350d6f7a1579b7ce1838871.png",
+    "assets/Logo-light-81cf97856447619a312f848c1e0e98d8.png": "/assets/Logo-light-81cf97856447619a312f848c1e0e98d8.png",
+    "assets/js/common~common~main.2d58fa65.js.LICENSE.txt": "/assets/js/common~common~main.2d58fa65.js.LICENSE.txt",
+    "assets/js/vendors~main.0b5cf8b7.js.LICENSE.txt": "/assets/js/vendors~main.0b5cf8b7.js.LICENSE.txt",
+    "assets/product-image-29679dbb28586960a582a89dae6d8d1a.webp": "/assets/product-image-29679dbb28586960a582a89dae6d8d1a.webp",
+    "index.html": "/index.html",
+    "precache-manifest.9f60258ea94243b8a95d82fc3ce4b9f3.js": "/precache-manifest.9f60258ea94243b8a95d82fc3ce4b9f3.js",
+    "public/.DS_Store": "/public/.DS_Store",
+    "public/logo.png": "/public/logo.png",
+    "service-worker.js": "/service-worker.js"
+  },
+  "entrypoints": [
+    "manifest.e79f5ea4.js",
+    "assets/js/common~common~main.2d58fa65.js",
+    "assets/js/material-ui.f8596347.js",
+    "assets/js/vendors~main.0b5cf8b7.js",
+    "assets/js/main.587accb8.js"
+  ]
+}
