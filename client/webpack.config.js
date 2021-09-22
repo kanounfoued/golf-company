@@ -28,7 +28,7 @@ const publicUrlOrPath = getPublicUrlOrPath(
 module.exports = (_, argv) => {
   return {
     mode: argv.mode === "production" ? "production" : "development",
-    devtool: argv.mode === "production" ? "source-map" : "source-map",
+    devtool: argv.mode === "production" ? "" : "source-map",
     bail: argv.mode === "production",
     // if the project is based on js files set entry to index.js
     entry: {
