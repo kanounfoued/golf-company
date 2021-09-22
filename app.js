@@ -6,8 +6,8 @@ var logger = require("morgan");
 const cors = require("cors");
 const compression = require("compression");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+// var indexRouter = require("./routes/index");
+// var usersRouter = require("./routes/users");
 
 var app = express();
 
@@ -34,7 +34,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.get("*", function (req, res, next) {
+  //   res.render('index', { title: 'Express' });
+  res.sendFile(path.resolve(__dirname, "/public", "index.html"));
+});
+// app.use("/", indexRouter);
+// app.use("/users", usersRouter);
 
 module.exports = app;
