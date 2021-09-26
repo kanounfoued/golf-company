@@ -11,6 +11,7 @@ const webpack = require("webpack");
 const fs = require("fs");
 const UnusedWebpackPlugin = require("unused-webpack-plugin");
 const CopyWebpack = require("copy-webpack-plugin");
+const PreloadWebpackPlugin = require("preload-webpack-plugin");
 
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
@@ -87,7 +88,7 @@ module.exports = (_, argv) => {
         {
           test: /\.css$/,
           use: [
-            "style-loader",
+            MiniCssExtractPlugin.loader,
             {
               loader: "css-loader",
               // active these options, while you want to use css files as modules.
@@ -96,7 +97,7 @@ module.exports = (_, argv) => {
               // access to the class using => classes.className.
               options: {
                 // while using the style as modules, it would be recommended to use camelcase format to name classes.
-                // modules: true,
+                modules: true,
               },
             },
           ],
@@ -115,7 +116,7 @@ module.exports = (_, argv) => {
 
     optimization: {
       minimize: argv.mode === "production",
-      minimizer: [new OptimizeCSSAssetsPlugin({}), new TerserJSPlugin()],
+      minimizer: [new OptimizeCSSAssetsPlugin(), new TerserJSPlugin()],
 
       runtimeChunk: { name: "manifest" },
 
@@ -191,6 +192,11 @@ module.exports = (_, argv) => {
       new ScriptExtHtmlWebpackPlugin({
         preload: [/main/, /common/, /material-ui/, /jss/],
         defer: [/main/, /common/, /material-ui/, /jss/],
+      }),
+
+      new PreloadWebpackPlugin({
+        rel: "preload",
+        include: "initial",
       }),
 
       new ManifestPlugin({

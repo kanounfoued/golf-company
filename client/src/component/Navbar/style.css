@@ -1,0 +1,16 @@
+.root {
+  flex-grow: 1;
+}
+
+.brandAvatar {
+  height: 100% !important;
+  width: 120px !important;
+}
+
+.menuButton {
+  margin-right: 12px;
+}
+
+.title {
+  flex-grow: 1;
+}
