@@ -1,0 +1,12 @@
+.root {
+  max-width: 340px;
+  padding: 32px;
+}
+
+.root > div {
+  margin-bottom: 54px;
+}
+
+.root > div > * {
+  margin-right: 6px;
+}

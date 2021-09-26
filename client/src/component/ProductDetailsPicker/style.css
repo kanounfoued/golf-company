@@ -1,0 +1,46 @@
+.root {
+  width: 300px;
+  max-width: 300px;
+  max-height: 488px;
+}
+
+.detailAction button {
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.detailAction button:first-child {
+  height: 50px;
+  width: 90px;
+}
+.detailAction button:last-child {
+  height: 50px;
+  width: 200px;
+  backgound-color: #ffffff;
+}
+
+.detailAction button + button {
+  margin-left: 6px;
+}
+
+/* .detailAction {
+    '& button': {
+      fontSize: 10,
+      textTransform: 'capitalize',
+    },
+
+    '& button + button': {
+      marginLeft: 6,
+    },
+
+    '& button:first-child': {
+      height: 50,
+      width: 90,
+    },
+
+    '& button:last-child': {
+      height: 50,
+      width: 200,
+      backgoundColor: '#FFFFFF',
+    },
+  }, */

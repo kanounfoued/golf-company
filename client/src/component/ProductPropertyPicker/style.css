@@ -1,0 +1,34 @@
+.rootV,
+.rootH {
+  margin-bottom: 18px;
+}
+
+.rootV .MuiButtonGroup-groupedTextHorizontal,
+.rootH .MuiButtonGroup-groupedTextHorizontal {
+  border-right: none;
+  border-radius: 2px;
+}
+
+.rootV button + button {
+  margin-top: 6px;
+  margin-left: 0;
+}
+
+.rootH button + button {
+  margin-left: 6px;
+  margin-top: 0;
+}
+
+.titleSection {
+  margin-bottom: 12px;
+}
+
+.titleSection h6:first-child {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.titleSection h6:last-child {
+  font-size: 12px;
+}
