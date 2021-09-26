@@ -11,7 +11,6 @@ const webpack = require("webpack");
 const fs = require("fs");
 const UnusedWebpackPlugin = require("unused-webpack-plugin");
 const CopyWebpack = require("copy-webpack-plugin");
-const PreloadWebpackPlugin = require("preload-webpack-plugin");
 
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
@@ -192,11 +191,6 @@ module.exports = (_, argv) => {
       new ScriptExtHtmlWebpackPlugin({
         preload: [/main/, /common/, /material-ui/, /jss/],
         defer: [/main/, /common/, /material-ui/, /jss/],
-      }),
-
-      new PreloadWebpackPlugin({
-        rel: "preload",
-        include: "initial",
       }),
 
       new ManifestPlugin({
