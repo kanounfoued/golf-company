@@ -1,13 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import useStyles from './style';
-import Typography from '@material-ui/core/Typography';
-import CustomButtonGroup from '../CustomButtonGroup';
+import React from "react";
+import PropTypes from "prop-types";
+import Grid from "@material-ui/core/Grid";
+import classes from "./style.css";
+import Typography from "@material-ui/core/Typography";
+import CustomButtonGroup from "../CustomButtonGroup";
 
 function ProductPropertyPicker(props) {
-  const { buttons, activeText, label, orientation, variant, ariaLabel, fullWidth } = props;
-  const classes = useStyles({ orientation });
+  const {
+    buttons,
+    activeText,
+    label,
+    orientation,
+    variant,
+    ariaLabel,
+    fullWidth,
+  } = props;
+  // const classes = useStyles({ orientation });
+
+  const root = orientation === "vertical" ? classes.rootV : classes.rootH;
 
   return (
     <>
@@ -17,7 +27,7 @@ function ProductPropertyPicker(props) {
       </Grid>
 
       <CustomButtonGroup
-        className={classes.root}
+        className={root}
         variant={variant}
         aria-label={ariaLabel}
         orientation={orientation}
@@ -35,16 +45,16 @@ ProductPropertyPicker.propTypes = {
   label: PropTypes.string,
   variant: PropTypes.string,
   ariaLabel: PropTypes.string,
-  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
+  orientation: PropTypes.oneOf(["horizontal", "vertical"]),
   fullWidth: PropTypes.bool,
 };
 
 ProductPropertyPicker.defaultProps = {
   buttons: [],
-  label: '',
-  variant: 'text',
-  ariaLabel: '',
-  orientation: 'horizontal',
+  label: "",
+  variant: "text",
+  ariaLabel: "",
+  orientation: "horizontal",
   fullWidth: false,
 };
 

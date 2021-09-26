@@ -1,25 +1,36 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Avatar from '@material-ui/core/Avatar';
-import Badge from '@material-ui/core/Badge';
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import LogoLight from '../../assets/images/Logo-light.png';
-import LogoDark from '../../assets/images/Logo-dark.png';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import SearchIcon from '@material-ui/icons/Search';
-import useStyles from './style';
+import React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Avatar from "@material-ui/core/Avatar";
+import Badge from "@material-ui/core/Badge";
+import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import LogoLight from "../../assets/images/Logo-light.png";
+import LogoDark from "../../assets/images/Logo-dark.png";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import SearchIcon from "@material-ui/icons/Search";
+// import useStyles from "./style";
 
-import { useCart, CartProvider } from '../../context/cart';
+import classes from "./style.css";
+
+import { useCart, CartProvider } from "../../context/cart";
 
 function CartBtn() {
   const state = useCart();
 
   return (
-    <IconButton aria-label="user cart" aria-controls="cart-btn" aria-haspopup="true" color="inherit">
-      <Badge badgeContent={state.count} color="secondary" data-testid="cart-badge">
+    <IconButton
+      aria-label="user cart"
+      aria-controls="cart-btn"
+      aria-haspopup="true"
+      color="inherit"
+    >
+      <Badge
+        badgeContent={state.count}
+        color="secondary"
+        data-testid="cart-badge"
+      >
         <ShoppingCartIcon fontSize="small" />
       </Badge>
     </IconButton>
@@ -28,8 +39,7 @@ function CartBtn() {
 
 function Navbar(props) {
   const { isDark } = props;
-  const classes = useStyles();
-
+  // const classes = useStyles();
   const brandLogo = isDark ? LogoDark : LogoLight;
 
   return (
