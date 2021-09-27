@@ -11,7 +11,7 @@ const webpack = require("webpack");
 const fs = require("fs");
 const UnusedWebpackPlugin = require("unused-webpack-plugin");
 const CopyWebpack = require("copy-webpack-plugin");
-const PreloadWebpackPlugin = require("@vue/preload-webpack-plugin");
+// const PreloadWebpackPlugin = require("@vue/preload-webpack-plugin");
 
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
@@ -195,10 +195,10 @@ module.exports = (_, argv) => {
         defer: [/main/, /common/, /material-ui/, /jss/, /manifest/],
       }),
 
-      new PreloadWebpackPlugin({
-        rel: "preload",
-        include: "initial",
-      }),
+      // new PreloadWebpackPlugin({
+      //   rel: "preload",
+      //   include: "initial",
+      // }),
 
       new ManifestPlugin({
         fileName: "asset-manifest.json",
