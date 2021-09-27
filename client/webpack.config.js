@@ -11,7 +11,7 @@ const webpack = require("webpack");
 const fs = require("fs");
 const UnusedWebpackPlugin = require("unused-webpack-plugin");
 const CopyWebpack = require("copy-webpack-plugin");
-const PreloadWebpackPlugin = require("preload-webpack-plugin");
+const PreloadWebpackPlugin = require("@vue/preload-webpack-plugin");
 
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
@@ -190,16 +190,13 @@ module.exports = (_, argv) => {
       }),
 
       new ScriptExtHtmlWebpackPlugin({
-        preload: [/main/, /common/, /material-ui/, /jss/],
-        defer: [/main/, /common/, /material-ui/, /jss/],
+        // preload: [/main/, /common/, /material-ui/, /jss/, /manifest/],
+        defer: [/main/, /common/, /material-ui/, /jss/, /manifest/],
       }),
 
       new PreloadWebpackPlugin({
         rel: "preload",
-        as(entry) {
-          if (/\.css$/.test(entry)) return "style";
-          if (/\.png$/.test(entry)) return "image";
-        },
+        include: "all",
       }),
 
       new ManifestPlugin({
