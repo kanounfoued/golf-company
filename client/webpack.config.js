@@ -196,7 +196,7 @@ module.exports = (_, argv) => {
 
       new PreloadWebpackPlugin({
         rel: "preload",
-        include: "all",
+        include: "initial",
       }),
 
       new ManifestPlugin({
