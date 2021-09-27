@@ -191,7 +191,7 @@ module.exports = (_, argv) => {
       }),
 
       new ScriptExtHtmlWebpackPlugin({
-        // preload: [/main/, /common/, /material-ui/, /jss/, /manifest/],
+        preload: [/main/, /common/, /material-ui/, /jss/, /manifest/],
         defer: [/main/, /common/, /material-ui/, /jss/, /manifest/],
       }),
 
