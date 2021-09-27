@@ -88,7 +88,8 @@ module.exports = (_, argv) => {
         {
           test: /\.css$/,
           use: [
-            MiniCssExtractPlugin.loader,
+            "style-loader",
+            // MiniCssExtractPlugin.loader,
             {
               loader: "css-loader",
               // active these options, while you want to use css files as modules.
@@ -190,7 +191,7 @@ module.exports = (_, argv) => {
       }),
 
       new ScriptExtHtmlWebpackPlugin({
-        preload: [/main/, /common/, /material-ui/, /jss/, /manifest/],
+        // preload: [/main/, /common/, /material-ui/, /jss/, /manifest/],
         defer: [/main/, /common/, /material-ui/, /jss/, /manifest/],
       }),
 
