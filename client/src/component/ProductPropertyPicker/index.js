@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
-import classes from "./style.css";
 import Typography from "@material-ui/core/Typography";
 import CustomButtonGroup from "../CustomButtonGroup";
+import useStyles from "./style";
+// import classes from "./style.css";
 
 function ProductPropertyPicker(props) {
   const {
@@ -15,7 +16,7 @@ function ProductPropertyPicker(props) {
     ariaLabel,
     fullWidth,
   } = props;
-  // const classes = useStyles({ orientation });
+  const classes = useStyles({ orientation });
 
   const root = orientation === "vertical" ? classes.rootV : classes.rootH;
 

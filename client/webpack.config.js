@@ -88,6 +88,7 @@ module.exports = (_, argv) => {
         {
           test: /\.css$/,
           use: [
+            // "style-loader",
             MiniCssExtractPlugin.loader,
             {
               loader: "css-loader",
@@ -196,7 +197,7 @@ module.exports = (_, argv) => {
 
       new PreloadWebpackPlugin({
         rel: "preload",
-        include: "allAssets",
+        include: "initial",
       }),
 
       new ManifestPlugin({

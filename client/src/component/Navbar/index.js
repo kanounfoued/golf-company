@@ -10,9 +10,9 @@ import LogoLight from "../../assets/images/Logo-light.png";
 import LogoDark from "../../assets/images/Logo-dark.png";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SearchIcon from "@material-ui/icons/Search";
-// import useStyles from "./style";
+import useStyles from "./style";
 
-import classes from "./style.css";
+// import classes from "./style.css";
 
 import { useCart, CartProvider } from "../../context/cart";
 
@@ -39,7 +39,7 @@ function CartBtn() {
 
 function Navbar(props) {
   const { isDark } = props;
-  // const classes = useStyles();
+  const classes = useStyles();
   const brandLogo = isDark ? LogoDark : LogoLight;
 
   return (
