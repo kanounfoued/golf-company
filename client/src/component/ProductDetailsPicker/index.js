@@ -4,11 +4,11 @@ import Button from "@material-ui/core/Button";
 import ProductPropertyPicker from "../ProductPropertyPicker";
 import img3 from "../../assets/images/3.png";
 import img4 from "../../assets/images/4.png";
-// import useStyles from './style';
-import classes from "./style.css";
+import useStyles from "./style";
+// import classes from "./style.css";
 
 function ProductDetailsPicker() {
-  // const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <Grid className={classes.root}>

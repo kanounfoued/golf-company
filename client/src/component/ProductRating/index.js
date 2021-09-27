@@ -2,14 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
 import Rating from "@material-ui/lab/Rating";
-import classes from "./style.css";
 import { Typography } from "@material-ui/core";
+import useStyles from "./style";
+// import classes from "./style.css";
 
 // add ProductRating tests
 
 function ProductRating(props) {
   const { average, nbrRating, text } = props;
-  // const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <Grid
